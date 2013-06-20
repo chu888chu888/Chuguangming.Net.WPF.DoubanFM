@@ -1,0 +1,26 @@
+﻿<Window x:Class="DoubanFM.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        d:DesignHeight="180" d:DesignWidth="350"
+        Title="帮助" WindowStyle="None" AllowsTransparency="True" SizeToContent="WidthAndHeight" Background="Transparent" ResizeMode="NoResize" WindowStartupLocation="Manual" Icon="/DoubanFM;component/db.ico" Topmost="True" ShowInTaskbar="False">
+    <Grid MouseLeftButtonDown="DragMove">
+        <Border x:Name="border" CornerRadius="10" Background="DimGray" Width="330" Height="140" Margin="0,0,-2,0" Grid.RowSpan="3" />
+        <Canvas Width="330">
+            <Image x:Name="CloseButton" Width="30" Height="30" Canvas.Left="295" Canvas.Top="0" Source="/DoubanFM;component/Images/Close.png" Style="{StaticResource imageStyle}" ToolTip="关闭" MouseLeftButtonDown="CloseClick" />
+            <StackPanel Canvas.Left="30" Canvas.Top="35" Width="130" Orientation="Vertical">
+                <TextBlock x:Name="line11" Foreground="White" FontSize="12" TextWrapping="Wrap" />
+                <TextBlock x:Name="line12" Foreground="White" FontSize="12" TextWrapping="Wrap" />
+                <TextBlock x:Name="line13" Foreground="White" FontSize="12" TextWrapping="Wrap" />
+                <TextBlock x:Name="line14" Foreground="White" FontSize="12" TextWrapping="Wrap" />
+            </StackPanel>
+            <StackPanel Canvas.Left="160" Canvas.Top="35" Width="130" Orientation="Vertical">
+                <TextBlock x:Name="line21" Foreground="White" FontSize="12" TextWrapping="Wrap" />
+                <TextBlock x:Name="line22" Foreground="White" FontSize="12" TextWrapping="Wrap" />
+                <TextBlock x:Name="line23" Foreground="White" FontSize="12" TextWrapping="Wrap" />
+                <TextBlock x:Name="line24" Foreground="White" FontSize="12" TextWrapping="Wrap" />
+            </StackPanel>
+        </Canvas>
+    </Grid>
+</Window>

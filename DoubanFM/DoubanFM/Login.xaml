@@ -1,0 +1,25 @@
+﻿<Window x:Class="DoubanFM.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        d:DesignHeight="220" d:DesignWidth="350"
+        Title="豆瓣电台登陆" WindowStyle="None" AllowsTransparency="True" SizeToContent="WidthAndHeight" Background="Transparent" ResizeMode="NoResize" WindowStartupLocation="Manual" Icon="/DoubanFM;component/db.ico" Topmost="True" ShowInTaskbar="False">
+    <Grid MouseLeftButtonDown="DragMove">
+        <Border x:Name="border" CornerRadius="10" Background="DimGray" Width="330" Height="180" Margin="0,0,-2,0" Grid.RowSpan="3" />
+        <Canvas Width="330">
+            <Label Width="40" Canvas.Left="20" Canvas.Top="20" Content="邮箱：" Foreground="White"/>
+            <Label Width="40" Canvas.Left="20" Canvas.Top="50" Content="密码：" Foreground="White"/>
+            <Label Width="55" Canvas.Left="7" Canvas.Top="80" Content="验证码：" Foreground="White"/>
+            <TextBox x:Name="userID" Width="140" Canvas.Left="65" Canvas.Top="21"/>
+            <PasswordBox x:Name="userPassword" Width="140" Canvas.Left="65" Canvas.Top="53"/>
+            <TextBox x:Name="captcha" Width="140" Canvas.Left="65" Canvas.Top="85"/>
+            <Image x:Name="captchaImage" Width="120" Height="30" Canvas.Left="65" Canvas.Top="110"/>
+            <Image x:Name="loginButton" Width="40" Height="40" Canvas.Left="235" Canvas.Top="50" Source="/DoubanFM;component/Images/Go.png" Style="{StaticResource imageStyle}" ToolTip="登陆" MouseLeftButtonDown="LoginClick" />
+            <Image x:Name="CloseButton" Width="30" Height="30" Canvas.Left="295" Canvas.Top="0" Source="/DoubanFM;component/Images/Close.png" Style="{StaticResource imageStyle}" ToolTip="关闭" MouseLeftButtonDown="CloseClick" />
+            <Separator Height="1" Width="326" Canvas.Left="2" Canvas.Bottom="36" Background="#FF585858"/>
+            <Image Width="190" Height="30" Canvas.Left="70" Canvas.Top="145" Source="/DoubanFM;component/Images/Bottomline.png" />
+            <TextBlock x:Name="errMsg" Width="130" Canvas.Left="190" Canvas.Top="120" Foreground="White" Text="正在加载验证码..."/>
+        </Canvas>
+    </Grid>
+</Window>
